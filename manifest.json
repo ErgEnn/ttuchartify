@@ -1,0 +1,24 @@
+{
+
+  "description": "Adds chart to campus site.",
+  "manifest_version": 2,
+  "name": "TTUChart",
+  "version": "1.0",
+  "homepage_url": "https://www.google.com",
+  "icons": {
+    "48": "icons/chart-48.png"
+  },
+  
+   "permissions": [
+    "webRequest",
+    "https://e-kyla.campusttu.ee/Tenant/*"
+  ],
+  
+  "content_scripts": [
+    {
+      "matches": ["https://e-kyla.campusttu.ee/Tenant/TenantInvoices.aspx?PersonPid=*"],
+      "js": ["jquery-3.3.1.min.js","highcharts.js","ttuchartify.js"]
+    }
+  ]
+
+}
